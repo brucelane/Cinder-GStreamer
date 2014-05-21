@@ -1,4 +1,4 @@
-Cinder-Spout
+Cinder-GStreamer
 ============
 
-Cinder block for Spout ( http://spout.zeal.co/ )
+Cinder block for GStreamer ( adapted from https://github.com/cadet/_2RealGStreamerWrapper )
