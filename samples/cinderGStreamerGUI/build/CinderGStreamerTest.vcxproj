@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -24,12 +24,12 @@
     <ConfigurationType>Application</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -43,10 +43,10 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName)_debug</TargetName>
@@ -55,7 +55,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\..\..\..\..\blocks\fmod\include;..\..\..\..\..\blocks\gstreamer\include;..\..\..\..\..\include;..\..\..\..\..\boost;..\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(_2REAL_DEPENDENCIES_DIR)\fmod\include;$(_2REAL_DEPENDENCIES_DIR)\gstreamer\include;$(_2REAL_DEPENDENCIES_DIR)\cinder_0.8.5_vc2012\include;$(_2REAL_DEPENDENCIES_DIR)\cinder_0.8.5_vc2012\boost;..\..\..\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -66,8 +66,8 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>_2RealGStreamerWrapper_mt_32sd.lib;cinder-$(PlatformToolset)_d.lib;fmodex_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>"..\..\..\..\..\\lib\msw\$(PlatformTarget)";..\..\..\..\..\blocks\gstreamer\lib;..\..\..\..\..\blocks\fmod\lib\msw</AdditionalLibraryDirectories>
+      <AdditionalDependencies>_2RealGStreamerWrapper_mt_32sd.lib;cinder_d.lib;fmodex_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(_2REAL_DEPENDENCIES_DIR)\cinder_0.8.5_vc2012\boost;$(_2REAL_DEPENDENCIES_DIR)\cinder_0.8.5_vc2012\lib;$(_2REAL_DEPENDENCIES_DIR)\cinder_0.8.5_vc2012\lib\msw;..\..\..\lib;$(_2REAL_DEPENDENCIES_DIR)\fmod\lib</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
@@ -79,7 +79,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>..\..\..\..\..\blocks\fmod\include;..\..\..\..\..\blocks\gstreamer\include;..\..\..\..\..\include;..\..\..\..\..\boost;..\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(_2REAL_DEPENDENCIES_DIR)\fmod\include;$(_2REAL_DEPENDENCIES_DIR)\gstreamer\include;$(_2REAL_DEPENDENCIES_DIR)\cinder_0.8.5_vc2012\include;$(_2REAL_DEPENDENCIES_DIR)\cinder_0.8.5_vc2012\boost;..\..\..\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeader>
@@ -88,8 +88,8 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>_2RealGStreamerWrapper_mt_32s.lib;cinder-$(PlatformToolset).lib;fmodex_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>"..\..\..\..\..\\lib\msw\$(PlatformTarget)";..\..\..\..\..\blocks\gstreamer\lib;..\..\..\..\..\blocks\fmod\lib\msw</AdditionalLibraryDirectories>
+      <AdditionalDependencies>_2RealGStreamerWrapper_mt_32s.lib;cinder.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(_2REAL_DEPENDENCIES_DIR)\cinder_0.8.5_vc2012\boost\lib;$(_2REAL_DEPENDENCIES_DIR)\cinder_0.8.5_vc2012\lib;$(_2REAL_DEPENDENCIES_DIR)\cinder_0.8.5_vc2012\lib\msw;..\..\..\lib;$(_2REAL_DEPENDENCIES_DIR)\fmod\lib</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
