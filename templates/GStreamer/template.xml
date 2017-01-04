@@ -3,6 +3,5 @@
 <template name="GStreamer: Basic" parent="org.libcinder.apptemplates.basicopengl">
 	<requires>fr.batchass.gstreamer</requires>
 	<source replaceContents="true" replaceName="true">src/_TBOX_PREFIX_App.cpp</source>
-	<header>include/_2RealGStreamerWrapper.h</header>
 </template>
 </cinder>
