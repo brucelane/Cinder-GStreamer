@@ -12,7 +12,17 @@
 	<supports os="msw" />
 	<includePath>include</includePath>
 	<includePath>external/gstreamer/include</includePath>
-
+	<staticLibrary>lib/_2RealGStreamerWrapper_mt_32sd.lib</staticLibrary>
+	<staticLibrary>lib/_2RealGStreamerWrapper_mt_32s.lib</staticLibrary>
+	<staticLibrary>lib/libgmp-10.lib</staticLibrary>
+	<staticLibrary>lib/fmodex_vc.lib.lib</staticLibrary>
+	<buildCopy>lib/avcodec-53.dll</buildCopy>
+	<buildCopy>lib/avformat-53.dll</buildCopy>
+	<buildCopy>lib/avutil-51.dll</buildCopy>
+	<buildCopy>lib/icudt.dll</buildCopy>
+	<buildCopy>lib/libEGL.dll</buildCopy>
+	<buildCopy>lib/libGLESv2.dll</buildCopy>
+	<buildCopy>lib/libgmp-10.dll</buildCopy>
 
 </block>
 <template>templates/GStreamer/template.xml</template>

@@ -1,3 +1,4 @@
+#pragma once
 
 #include "cinder/app/App.h"
 #include "cinder/app/RendererGl.h"
@@ -80,7 +81,7 @@ void cinderGStreamerGUIApp::setup()
 		if (testFile->open(path, m_bUseVideoBuffer, m_bUseAudioBuffer))
 		{
 			m_Players.push_back(testFile);
-			m_VideoTextures.push_back(gl::Texture::create());
+			m_VideoTextures.push_back(gl::Texture::create(800, 600));
 			m_Players.back()->setLoopMode(LOOP);
 			m_Players.back()->play();
 		}
@@ -165,7 +166,7 @@ void cinderGStreamerGUIApp::open()
 		if (fileToLoad->open(uri, m_bUseVideoBuffer, m_bUseAudioBuffer))
 		{
 			m_Players.push_back(fileToLoad);
-			m_VideoTextures.push_back(gl::Texture::create());
+			m_VideoTextures.push_back(gl::Texture::create(800, 600));
 			m_Players.back()->play();
 		}
 	}
@@ -181,7 +182,7 @@ void cinderGStreamerGUIApp::fileDrop(FileDropEvent event)
 		if (fileToLoad->open(uri, m_bUseVideoBuffer, m_bUseAudioBuffer))
 		{
 			m_Players.push_back(fileToLoad);
-			m_VideoTextures.push_back(gl::Texture::create());
+			m_VideoTextures.push_back(gl::Texture::create(800, 600));
 			m_Players.back()->play();
 		}
 	}
